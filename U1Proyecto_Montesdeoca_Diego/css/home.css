@@ -1,0 +1,43 @@
+/* Página de inicio */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+
+.hero-image img {
+  border-radius: 1.5rem;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+.hero .muted {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.cards-grid {
+  margin-top: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  min-height: 320px;
+}
+
+.card h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.card span {
+  display: block;
+  margin-top: 0.5rem;
+  color: #ffd966;
+  font-weight: 700;
+}

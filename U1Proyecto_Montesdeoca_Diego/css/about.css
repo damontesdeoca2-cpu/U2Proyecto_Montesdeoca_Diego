@@ -1,0 +1,41 @@
+/* Página Acerca */
+main .cards-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+details {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  outline: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 0.75rem;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+main section > .card {
+  display: grid;
+  gap: 1rem;
+}
