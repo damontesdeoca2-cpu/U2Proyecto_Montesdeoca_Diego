@@ -1,0 +1,383 @@
+/* ============================================================
+   BLOQUE 1: CONFIGURACIÓN GENERAL
+   Selector universal, body, fuente, fondo, color e interlineado.
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top left, #1e1b33 0%, #090712 55%, #040306 100%);
+  color: #f4f5ff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+audio,
+video,
+iframe {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* ============================================================
+   BLOQUE 2: TÍTULOS, PÁRRAFOS Y ENLACES
+   Estilos para h1, h2, h3, p, a y a:hover.
+   ============================================================ */
+
+h1,
+h2,
+h3 {
+  color: #f8f8ff;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 0.85rem;
+}
+
+h3 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  margin-bottom: 0.7rem;
+}
+
+p,
+small,
+li,
+figcaption,
+label {
+  color: rgba(244, 245, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
+p {
+  max-width: 60rem;
+}
+
+a {
+  color: #d5b0ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffd966;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   BLOQUE 3: ELEMENTOS SEMÁNTICOS PRINCIPALES
+   Estilos para header, nav, main, section, article, aside y footer.
+   ============================================================ */
+
+header {
+  background: rgba(4, 3, 10, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+main {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 0;
+}
+
+article {
+  background: rgba(15, 15, 23, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+}
+
+aside {
+  background: rgba(13, 12, 18, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+footer {
+  background: rgba(6, 5, 12, 0.98);
+  padding: 1.75rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer p,
+footer address {
+  color: rgba(244, 245, 255, 0.7);
+}
+
+/* ============================================================
+   BLOQUE 4: MENÚ DE NAVEGACIÓN
+   Estilos para nav, nav a y nav a:hover.
+   ============================================================ */
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 0.75rem;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(244, 245, 255, 0.9);
+}
+
+nav a:hover {
+  background: rgba(213, 176, 255, 0.14);
+  color: #fff;
+}
+
+/* ============================================================
+   BLOQUE 5: CONTENIDO Y SECCIONES
+   Estilos para main, section, article y aside.
+   ============================================================ */
+
+header .container,
+main .container,
+footer .container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+header p,
+header input,
+header button,
+header a {
+  color: #f4f5ff;
+}
+
+main section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+main section:nth-of-type(1) {
+  align-items: center;
+  gap: 2rem;
+}
+
+main section:nth-of-type(1) > div {
+  display: grid;
+  gap: 1.5rem;
+}
+
+main section:nth-of-type(1) img {
+  border-radius: 1.5rem;
+  object-fit: cover;
+  height: auto;
+}
+
+article a,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+article a {
+  background: linear-gradient(135deg, #bc7cff, #5f69ff);
+  color: #fff;
+}
+
+article a:hover,
+button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ffe27f, #d0b2ff);
+}
+
+main ul,
+main ol {
+  padding-left: 1.35rem;
+}
+
+main li {
+  margin-bottom: 0.85rem;
+}
+
+/* ============================================================
+   BLOQUE 6: IMÁGENES Y MULTIMEDIA
+   Estilos para img, figure, figcaption, video, audio e iframe.
+   ============================================================ */
+
+img {
+  border-radius: 1rem;
+}
+
+figure {
+  margin: 1.5rem 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: rgba(244, 245, 255, 0.7);
+  margin-top: 0.5rem;
+}
+
+audio,
+video,
+iframe {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+iframe {
+  aspect-ratio: 16 / 9;
+}
+
+/* ============================================================
+   BLOQUE 7: LISTAS
+   Estilos para ul, ol y li.
+   ============================================================ */
+
+ul,
+ol {
+  margin-bottom: 1rem;
+}
+
+li {
+  line-height: 1.55;
+}
+
+/* ============================================================
+   BLOQUE 8: FORMULARIOS
+   Estilos para form, label, input, textarea, select y button.
+   ============================================================ */
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f4f5ff;
+}
+
+textarea {
+  min-height: 140px;
+}
+
+button {
+  background: linear-gradient(135deg, #d6d3d7, #496dff);
+  color: #fff;
+  font-weight: 700;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ffcc57, #bb83ff);
+}
+
+/* ============================================================
+   BLOQUE 9: TABLAS
+   Estilos para table, thead, tbody, tr, th y td.
+   ============================================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(15, 15, 23, 0.95);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+thead {
+  background: rgba(88, 62, 142, 0.9);
+}
+
+th,
+td {
+  padding: 0.95rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ============================================================
+   BLOQUE 10: PIE DE PÁGINA
+   Estilos para footer, footer p y footer address.
+   ============================================================ */
+
+footer {
+  display: grid;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+footer a {
+  color: rgba(213, 176, 255, 0.9);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffd966;
+}
+

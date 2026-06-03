@@ -1,0 +1,53 @@
+/* Página Funciones */
+main > div {
+  display: grid;
+  gap: 1.5rem;
+}
+
+main .card {
+  padding: 1.5rem;
+}
+
+main select {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(28px, 1fr));
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+label.seat {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+label.seat:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + label.seat {
+  background: linear-gradient(135deg, #bc7cff, #5f69ff);
+  border-color: #8c6eff;
+}
+
+.seat-map span {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(244, 245, 255, 0.8);
+}
