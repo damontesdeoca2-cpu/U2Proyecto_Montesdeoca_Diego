@@ -1,0 +1,326 @@
+/* ============================================================
+   portafolio.css
+   Portfolio-specific styles for the new page.
+   Uses a navy blue and vibrant orange palette
+   to create a distinct visual identity.
+   ============================================================ */
+
+/* ============================================================
+   HEADER AND NAVIGATION
+   The header uses the new primary color.
+   Navigation stays readable and interactive.
+   ============================================================ */
+
+header {
+    background-color: #1a2a6c;
+    color: #f5f5f5;
+    padding: 30px 20px;
+}
+
+nav {
+    background-color: #0f1d47;
+    padding: 14px 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    background-color: #ffffff;
+    color: #1a2a6c;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #ff6a00;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #ff6a00;
+    color: white;
+    text-decoration: none;
+}
+
+.page-nav-section {
+    background-color: #eef1ff;
+    padding: 18px 20px;
+    margin: 0 auto 20px;
+    max-width: 1100px;
+}
+
+.page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.page-nav a {
+    color: #1a2a6c;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #c3d0ff;
+}
+
+.page-nav a:hover {
+    background-color: #ff6a00;
+    color: white;
+}
+
+/* ============================================================
+   FLEXBOX PROJECT CARDS
+   Flexbox is used to arrange the featured project cards.
+   ============================================================ */
+
+.projects-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border: 2px solid #ff6a00;
+    border-radius: 14px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 8px 20px rgba(26, 42, 108, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-card h3 {
+    margin: 0;
+    color: #1a2a6c;
+}
+
+.project-card ul {
+    list-style: disc inside;
+    margin: 0;
+    padding-left: 18px;
+}
+
+.project-card p,
+.project-card li {
+    margin: 0;
+    color: #333333;
+}
+
+/* ============================================================
+   CSS GRID CONCEPTS SECTION
+   This section uses Grid to arrange concept cards.
+   ============================================================ */
+
+#grid-css-concepts {
+    padding: 20px;
+}
+
+.grid-css-concepts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 16px;
+}
+
+.grid-css-concepts article {
+    background-color: #eef1ff;
+    border: 1px solid #c3d0ff;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.grid-css-concepts h3 {
+    margin-top: 0;
+    color: #1a2a6c;
+}
+
+.grid-css-concepts p {
+    margin-bottom: 0;
+    color: #222222;
+}
+
+/* ============================================================
+   SKILLS AND PROGRESS BARS
+   Progress indicators provide more detail than other pages.
+   ============================================================ */
+
+.progress-section {
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border: 1px solid #d6ddff;
+    border-radius: 12px;
+}
+
+.progress-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 16px;
+}
+
+.progress-item {
+    background-color: #f4f6ff;
+    border: 1px solid #c3d0ff;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.progress-item h3 {
+    margin-top: 0;
+    color: #1a2a6c;
+}
+
+.progress-item p {
+    margin-bottom: 0;
+    color: #222222;
+}
+
+progress {
+    width: 100%;
+    height: 18px;
+    margin: 10px 0;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e7eaf8;
+    border-radius: 12px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #ff6a00;
+    border-radius: 12px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #ff6a00;
+    border-radius: 12px;
+}
+
+/* ============================================================
+   ACADEMIC PROGRESS TABLE
+   A professional table style with hover row effects.
+   ============================================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table caption {
+    caption-side: top;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1a2a6c;
+}
+
+thead th,
+tbody td {
+    border: 1px solid #a6b2e4;
+    padding: 12px 14px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #1a2a6c;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7f8ff;
+}
+
+tbody tr:hover {
+    background-color: #ffe8d6;
+}
+
+/* ============================================================
+   RESPONSIVE LAYOUT
+   Elements adapt to small screens with vertical flow and
+   full-width cards. Padding and margins are adjusted for
+   better mobile usability.
+   ============================================================ */
+
+@media (max-width: 700px) {
+    header {
+        padding: 20px 12px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    nav,
+    .page-nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    nav a,
+    .page-nav a {
+        width: 100%;
+        text-align: center;
+        padding: 12px 10px;
+    }
+
+    .page-nav-section {
+        padding: 14px 10px;
+    }
+
+    .projects-overview {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .project-card {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .grid-css-concepts,
+    .progress-summary,
+    table {
+        width: 100%;
+    }
+
+    .grid-css-concepts,
+    .progress-summary {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    section,
+    article,
+    aside {
+        padding: 16px;
+        margin-bottom: 14px;
+    }
+
+    table th,
+    table td {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    progress {
+        height: 16px;
+    }
+}

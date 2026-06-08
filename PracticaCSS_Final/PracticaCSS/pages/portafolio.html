@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+
+    <!-- Browser tab icon -->
+    <link rel="icon" href="../img/mundito.ico" type="image/x-icon">
+
+    <!-- External icon library used across the site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Shared styles and portfolio-specific stylesheet -->
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/portafolio.css">
+</head>
+
+<body>
+
+    <!-- Main page header matching the rest of the site -->
+    <header>
+        <h1>Mi portafolio profesional</h1>
+        <p>Una página de proyectos creada con HTML semántico y CSS moderno.</p>
+    </header>
+
+    <!-- Main site navigation to keep the portfolio connected -->
+    <nav>
+        <a href="../index.html">
+            <i class="fa-solid fa-house"></i>
+            Inicio
+        </a>
+         <a href="#portfolio-intro">Intro</a>
+           
+        <a href="buscar.html">Buscar</a>
+        <a href="cto/contacto.html">
+            <i class="fa-solid fa-envelope"></i>
+            Contacto
+        </a>
+    </nav>
+
+    <!-- Internal portfolio section navigation -->
+    <section class="page-nav-section">
+        <h2>Navigate portfolio sections</h2>
+        <nav class="page-nav" aria-label="Portfolio section navigation">
+            <a href="#academic-progress">Academic table</a>
+             <a href="#projects">Projects</a>
+            <a href="#grid-css-concepts">Grid Concepts</a>
+            <a href="#progress">Progress</a>
+            <a href="#academic-progress">Academic table</a>
+        </nav>
+    </section>
+
+    <main>
+
+        <!-- Intro section with its own ID for direct linking -->
+        <section id="portfolio-intro">
+            <h2>Portfolio overview</h2>
+            <p>
+                Bienvenido al portafolio donde presento proyectos web con un diseño profesional,
+                secciones internas navegables y un progreso académico documentado.
+            </p>
+        </section>
+
+        <!-- Featured project cards using Flexbox -->
+        <section id="projects" class="projects-overview">
+            <article class="project-card">
+                <h3>Responsive design</h3>
+                <p>Proyecto que usa Grid, Flexbox y media queries para adaptarse a todos los dispositivos.</p>
+                <ul>
+                    <li>Responsive layout</li>
+                    <li>Modern typography</li>
+                    <li>Consistent spacing</li>
+                </ul>
+            </article>
+
+            <article class="project-card">
+                <h3>Academic dashboard</h3>
+                <p>Diseño de una interfaz de resultados con tablas accesibles y estados visuales claros.</p>
+                <ul>
+                    <li>Tablas ordenadas</li>
+                    <li>Headers contrastados</li>
+                    <li>Hover states definidos</li>
+                </ul>
+            </article>
+
+            <article class="project-card">
+                <h3>Design system</h3>
+                <p>Panel de conceptos y componentes que refuerzan la identidad visual del portafolio.</p>
+                <ul>
+                    <li>Paleta azul y naranja</li>
+                    <li>Tipografía consistente</li>
+                    <li>Botones con interacción</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Grid concepts section with semantic ID -->
+        <section id="grid-css-concepts">
+            <h2>CSS Grid concepts</h2>
+            <div class="grid-css-concepts">
+                <article>
+                    <h3>Grid container</h3>
+                    <p>The grid container defines rows and columns that order child elements.</p>
+                </article>
+                <article>
+                    <h3>Grid items</h3>
+                    <p>Grid items are placed in cells and can span multiple rows or columns.</p>
+                </article>
+                <article>
+                    <h3>Gap</h3>
+                    <p>Gap space keeps the layout clean and consistent across all cards.</p>
+                </article>
+                <article>
+                    <h3>Named areas</h3>
+                    <p>Named grid areas allow precise placement with semantic layout control.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Progress section with skill indicators and progress bars -->
+        <section id="progress" class="progress-section">
+            <h2>Skills and progress</h2>
+            <div class="progress-summary">
+                <article class="progress-item">
+                    <h3>HTML &amp; accessibility</h3>
+                    <progress value="95" max="100">95%</progress>
+                    <p>Markup structure, semantics, and screen reader friendly content.</p>
+                </article>
+                <article class="progress-item">
+                    <h3>CSS layout</h3>
+                    <progress value="88" max="100">88%</progress>
+                    <p>Flexbox, Grid, spacing, and responsive design patterns.</p>
+                </article>
+                <article class="progress-item">
+                    <h3>Visual polish</h3>
+                    <progress value="82" max="100">82%</progress>
+                    <p>Color palette, hover interactions, and professional UI details.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Academic progress table with semantic ID -->
+        <section id="academic-progress">
+            <h2>Academic progress</h2>
+            <table>
+                <caption>Registro de avance en el aprendizaje web</caption>
+                <thead>
+                    <tr>
+                        <th>Asignatura</th>
+                        <th>Estado</th>
+                        <th>Avance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML semántico</td>
+                        <td>Completado</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>CSS avanzado</td>
+                        <td>En progreso</td>
+                        <td>80%</td>
+                    </tr>
+                    <tr>
+                        <td>Flexbox y Grid</td>
+                        <td>En práctica</td>
+                        <td>75%</td>
+                    </tr>
+                    <tr>
+                        <td>Diseño responsive</td>
+                        <td>En revisión</td>
+                        <td>70%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mi portafolio web.</p>
+        <p>Ejercicio de diseño y estilos semánticos con CSS Grid y Flexbox.</p>
+    </footer>
+
+</body>
+
+</html>
